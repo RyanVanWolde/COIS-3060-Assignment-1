@@ -19,3 +19,11 @@ jobs:
           test -f src/script.js && echo "script.js exists" || exit 1
           test -f docs/requirements.md && echo "requirements.md exists" || exit 1
           test -f tests/test_checklist.md && echo "test_checklist.md exists" || exit 1
+
+      - name: Check Data Sources tab exists
+        run: |
+          grep -q 'id="DataSources"' src/index.html && echo "DataSources tab exists" || exit 1
+          grep -q 'GitHub' src/index.html && echo "GitHub source exists" || exit 1
+          grep -q 'Stack Overflow' src/index.html && echo "Stack Overflow source exists" || exit 1
+          grep -q 'JIRA' src/index.html && echo "JIRA source exists" || exit 1
+          grep -q 'npm Registry' src/index.html && echo "npm Registry source exists" || exit 1
