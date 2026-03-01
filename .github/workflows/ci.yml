@@ -1,4 +1,26 @@
-- name: Check Data Sources tab exists
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check required files exist
+        run: |
+          test -f src/index.html && echo "index.html exists" || exit 1
+          test -f src/style.css && echo "style.css exists" || exit 1
+          test -f src/script.js && echo "script.js exists" || exit 1
+          test -f docs/requirements.md && echo "requirements.md exists" || exit 1
+          test -f tests/test_checklist.md && echo "test_checklist.md exists" || exit 1
+
+      - name: Check Data Sources tab exists
         run: |
           grep -q 'id="DataSources"' src/index.html && echo "DataSources tab exists" || exit 1
           grep -q 'GitHub' src/index.html && echo "GitHub source exists" || exit 1
