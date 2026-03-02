@@ -14,6 +14,4 @@ The MSR Research Group Webpage is an online research guide for students and rese
 - *Milestone 3: Collection Methods Content* - Need to add the content to the Collection Methods tab.
 - *Milestone 4: Analysis Methods Content* - Need to add the content to the Analysis Methods tab.
 - *Milestone 5: Publication Venues Content* - Need to add the content to the Publication Venues tab.
-- *Milestone 6: Styling & Polish* - Need to finish the style.css so it looks clean and professional beyond the basics. Also make it functionla on mobile devices.
-
-- 
+- *Milestone 6: Styling & Polish* - Need to finish the style.css so it looks clean and professional beyond the basics. Also make it functionla on mobile devices. 
